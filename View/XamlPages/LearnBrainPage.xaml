@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MotionTrackerApp.LearnBrainPage"
+             xmlns:local="clr-namespace:MotionTrackerApp;assembly=MotionTrackerApp"
+             Title="MotionTracker App"
+             BackgroundColor="Gray"
+			 Padding="20, 50, 20, 0">	
+
+	<StackLayout>
+	  <Label FontSize="Large" Text="Motion Tracker"></Label>
+	  <Label FontSize="Medium" Text="{Binding NetError, StringFormat='Net error   : {0:F4}'}" />
+	  <Label FontSize="Medium" Text="{Binding LearnCycle, StringFormat='Learn Cycle : {0:F0}'}" />
+
+      <Button x:Name="buttonLearn" Text="Learn Brain"
+                FontSize="Large"
+                IsEnabled="true"
+                Command="{Binding LearnBrainCommand}"
+                HorizontalOptions="Center">           
+      </Button>
+    </StackLayout>
+
+</ContentPage>

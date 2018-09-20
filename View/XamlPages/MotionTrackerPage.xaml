@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MotionTrackerApp.MotionTrackerPage"
+             xmlns:local="clr-namespace:MotionTrackerApp;assembly=MotionTrackerApp"
+             Title="MotionTracker App"
+             BackgroundColor="{Binding BackColor}"
+			 Padding="20, 10, 20, 0">	
+
+	<StackLayout>
+	  <Label FontSize="Large" Text="Motion Tracker"></Label>
+
+	  <StackLayout Orientation="Vertical" BackgroundColor="Silver" Padding="20,10,10,20">
+
+        <Button x:Name="buttonStart" Text="Learn motion"
+                  FontSize="Large"
+                  IsEnabled="true"
+                  HeightRequest="20"
+                  Command="{Binding StartTrackingCommand}"
+                  HorizontalOptions="Center">           
+        </Button>
+
+        <Button x:Name="buttonStartMove1" Text="Start move #1"
+                  FontSize="Medium"
+                  TextColor="Black"
+                  HeightRequest="16"
+                  IsEnabled="{Binding CanStartMove1}"
+                  Command="{Binding StartMoveCommand}"
+                  HorizontalOptions="Center">           
+        </Button>
+         <Button x:Name="buttonStartMove2" Text="Start move #2"
+                  FontSize="Medium"
+                  TextColor="Black"
+                  HeightRequest="16"
+                  IsEnabled="{Binding CanStartMove2}"
+                  Command="{Binding StartMoveCommand}"
+                  HorizontalOptions="Center">           
+        </Button>
+         <Button x:Name="buttonStartMove3" Text="Start move #3"
+                  FontSize="Medium"
+                  TextColor="Black"
+                  HeightRequest="16"
+                  IsEnabled="{Binding CanStartMove3}"
+                  Command="{Binding StartMoveCommand}"
+                  HorizontalOptions="Center">           
+        </Button>
+         <Button x:Name="buttonStartMove4" Text="Start move #4"
+                  FontSize="Medium"
+                  TextColor="Black"
+                  HeightRequest="16"
+                  IsEnabled="{Binding CanStartMove4}"
+                  Command="{Binding StartMoveCommand}"
+                  HorizontalOptions="Center">           
+        </Button>
+         <Button x:Name="buttonStartMove5" Text="Start move #5"
+                  FontSize="Medium"
+                  TextColor="Black"
+                  HeightRequest="16"
+                  IsEnabled="{Binding CanStartMove5}"
+                  Command="{Binding StartMoveCommand}"
+                  HorizontalOptions="Center">           
+        </Button>
+         <Label x:Name="AccelerometerLabel" FontSize="Large" Text="Accelerometer"></Label>
+         <Label x:Name="ValueAcc1" Text="{Binding ValAcc1, StringFormat='The X-Value is {0:F4}'}" FontSize="Small"/>      
+         <Label x:Name="ValueAcc2" Text="{Binding ValAcc2, StringFormat='The Y-Value is {0:F4}'}" FontSize="Small"/>
+         <Label x:Name="ValueAcc3" Text="{Binding ValAcc3, StringFormat='The Z-Value is {0:F4}'}" FontSize="Small"/> 
+
+         <Label x:Name="GyroscopeLabel" FontSize="Large" Text="Gyroscope"></Label>
+         <Label x:Name="ValueGyro1" Text="{Binding ValGyro1, StringFormat='The X-Value is {0:F4}'}" FontSize="Small"/>      
+         <Label x:Name="ValueGyro2" Text="{Binding ValGyro2, StringFormat='The Y-Value is {0:F4}'}" FontSize="Small"/>
+         <Label x:Name="ValueGyro3" Text="{Binding ValGyro3, StringFormat='The Z-Value is {0:F4}'}" FontSize="Small"/> 
+
+       </StackLayout>
+
+       <Button x:Name="buttonStop" Text="Learn Artificial App Brain"
+                FontSize="Large"
+                IsEnabled="{Binding CanLearnBrain}"
+                Command="{Binding LearnBrainCommand}"
+                HorizontalOptions="Center">           
+      </Button>
+
+	</StackLayout>
+</ContentPage>
